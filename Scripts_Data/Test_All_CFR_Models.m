@@ -70,36 +70,30 @@ friction_variants = {'None','Stick-Slip Continuous'};
 for mdl_i = 1:length(mdlnames)
     mdl = char(mdlnames{mdl_i});
     open_system(mdl);
-    pause(1);
-    doFrictionTests = 1;
-    if(strcmp(mdl,'sm_ball_bearing_testrig'))
-        doFrictionTests = 0;
-    end
-    %    if(strcmp(mdl,'sm_ball_bearing_testrig'))
-    %        set_param([bdroot '/Ball Bearing'],'popup_constraints','Forces')
-    %        sm_ball_bearing_testrig_param
-    %    end
+%    if(strcmp(mdl,'sm_ball_bearing_testrig'))
+%        set_param([bdroot '/Ball Bearing'],'popup_constraints','Forces')
+%        sm_ball_bearing_testrig_param
+%    end
     disp(['TESTING ' mdl ' ...']);
     
-    if(doFrictionTests)
-        for frclaw_i=1:length(force_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Linear');
-                end
-            end
-        end
-        
-        for frilaw_i=1:length(friction_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'None');
-                end
+    for frclaw_i=1:length(force_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Linear');
             end
         end
     end
+    
+    for frilaw_i=1:length(friction_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'None');
+            end
+        end
+    end
+    
     sim(mdl);
     CFR_Res{mdl_i+1,1} = mdl_i;
     CFR_Res{mdl_i+1,2} = mdl;
@@ -107,45 +101,42 @@ for mdl_i = 1:length(mdlnames)
     CFR_Res{mdl_i+1,4} = num2str(length(tout));
     CFR_Res{mdl_i+1,5} = sprintf('%5.3f',Elapsed_Sim_Time);
     
-    if(doFrictionTests)
-        for frclaw_i=1:length(force_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Linear');
-                end
-            end
-        end
-        
-        for frilaw_i=1:length(friction_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
-                end
+    for frclaw_i=1:length(force_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Linear');
             end
         end
     end
+    
+    for frilaw_i=1:length(friction_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
+            end
+        end
+    end
+    
     sim(mdl);
     CFR_Res{mdl_i+1,6} = num2str(length(tout));
     CFR_Res{mdl_i+1,7} = sprintf('%5.3f',Elapsed_Sim_Time);
     
-    if(doFrictionTests)
-        for frclaw_i=1:length(force_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Nonlinear');
-                end
+    for frclaw_i=1:length(force_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Nonlinear');
             end
         end
-        
-        for frilaw_i=1:length(friction_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'None');
-                end
+    end
+    
+    for frilaw_i=1:length(friction_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'None');
             end
         end
     end
@@ -154,22 +145,20 @@ for mdl_i = 1:length(mdlnames)
     CFR_Res{mdl_i+1,8} = num2str(length(tout));
     CFR_Res{mdl_i+1,9} = sprintf('%5.3f',Elapsed_Sim_Time);
     
-    if(doFrictionTests)
-        for frclaw_i=1:length(force_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Nonlinear');
-                end
+    for frclaw_i=1:length(force_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Nonlinear');
             end
         end
-        
-        for frilaw_i=1:length(friction_law_list)
-            block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
-            if(~isempty(block_pths))
-                for i=1:length(block_pths)
-                    set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
-                end
+    end
+    
+    for frilaw_i=1:length(friction_law_list)
+        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        if(~isempty(block_pths))
+            for i=1:length(block_pths)
+                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
             end
         end
     end
