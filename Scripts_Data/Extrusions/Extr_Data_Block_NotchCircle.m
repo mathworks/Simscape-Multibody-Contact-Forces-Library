@@ -64,7 +64,7 @@ else
 end
 
 xyset6 = flipud(Extr_Data_Ring(notch_rad,-1,-notch_th+90,notch_th+90));
-xyset6 = xyset6 + repmat([0 -notch_rad*cosd(notch_th)],size(xyset6,1),1);
+xyset6 = xyset6 + [0 -notch_rad*cosd(notch_th)];
 xy_data=[xy_data;xyset6];
 
 %xy_data = xy_data + [0 (b_D+b_d)/4+sph_r*cosd(race_th)];

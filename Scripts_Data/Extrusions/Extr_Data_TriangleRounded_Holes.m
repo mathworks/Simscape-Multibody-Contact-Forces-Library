@@ -42,11 +42,11 @@ ang_R2H = atan2d(H,(xL*L));
 ang_F2H = atan2d(H,((1-xL)*L));
 
 xy_data1 = [L -ro];
-xy_data2 = [cosd(270:-1:-90); sind(270:-1:-90)]'*ri+repmat([L 0],length(270:-1:-90),1);
-xy_data3 = [cosd(-90:1:90-ang_F2H); sind(-90:1:90-ang_F2H)]'*ro+repmat([L 0],length(-90:1:90-ang_F2H),1);
+xy_data2 = [cosd(270:-1:-90); sind(270:-1:-90)]'*ri+[L 0];
+xy_data3 = [cosd(-90:1:90-ang_F2H); sind(-90:1:90-ang_F2H)]'*ro+[L 0];
 xy_data4 = [cosd(90-ang_F2H); sind(90-ang_F2H)]'*ro+[xL*L H];
-xy_data5 = [cosd(90-ang_F2H:-1:(90-ang_F2H-360)); sind(90-ang_F2H:-1:(90-ang_F2H-360))]'*ri+repmat([xL*L H],length(90-ang_F2H:-1:(90-ang_F2H-360)),1);
-xy_data6 = [cosd(90-ang_F2H:1:(ang_R2H+90)); sind(90-ang_F2H:1:(ang_R2H+90))]'*ro+repmat([xL*L H],length(90-ang_F2H:1:(ang_R2H+90)),1);
+xy_data5 = [cosd(90-ang_F2H:-1:(90-ang_F2H-360)); sind(90-ang_F2H:-1:(90-ang_F2H-360))]'*ri+[xL*L H];
+xy_data6 = [cosd(90-ang_F2H:1:(ang_R2H+90)); sind(90-ang_F2H:1:(ang_R2H+90))]'*ro+[xL*L H];
 xy_data7 = [cosd(ang_R2H+90); sind(ang_R2H+90)]'*ro;
 xy_data8 = [cosd((ang_R2H+90):-1:(ang_R2H-270)); sind((ang_R2H+90):-1:(ang_R2H-270))]'*ri;
 xy_data9 = [cosd((ang_R2H-270):1:-90); sind((ang_R2H-270):1:-90)]'*ro;
