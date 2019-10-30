@@ -37,6 +37,12 @@ deleteFileList = {...
     ['Scripts_Data' filesep 'CheckAnim.m'],
     ['Scripts_Data' filesep 'CheckHTMLDoc.m'],
     ['Scripts_Data' filesep 'temp_setvispar.m']
+    ['Libraries' filesep 'Images' filesep 'Link_End_nx_IMAGE.png']
+    ['Libraries' filesep 'Images' filesep 'Link_End_px_IMAGE.png']
+    ['Libraries' filesep 'Images' filesep 'Link_Seg_2_Hole_IMAGE.png']
+    ['Libraries' filesep 'Images' filesep 'Rod_nZ_IMAGE.png']
+    ['Libraries' filesep 'Images' filesep 'Rod_pZ_IMAGE.png']
+    ['Libraries' filesep 'Images' filesep 'Triangle_Link_IMAGE.png']
     };
 
 for i=1:length(deleteFileList)

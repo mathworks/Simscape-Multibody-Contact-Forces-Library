@@ -17,7 +17,7 @@ function [xy_data] = Extr_Data_TriangleRounded_Holes(L, H, xL, ri, ro, varargin)
 %
 %   To see a plot created with your parameter values,
 %   add 'plot' as the final argument
-%   >> Extr_Data_TriangleRounded_Holes(10,5,1,2,'plot')
+%   >> Extr_Data_TriangleRounded_Holes(6,4,0.33,1,2,'plot')
 %
 % Copyright 2014-2018 The MathWorks, Inc.
 
