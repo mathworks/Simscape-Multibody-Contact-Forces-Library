@@ -1,5 +1,5 @@
 Simscape Multibody Contact Forces Library
-Copyright 2014-2018 The MathWorks, Inc.
+Copyright 2014-2019 The MathWorks, Inc.
 
 This library contains contact force models for use with Simscape Multibody.
 They can be used for intermittent contact (parts bouncing off each other)
@@ -9,7 +9,7 @@ You are welcome to use this library in your own projects. If you need to
 include the library in your own project, run >> CFL_SaveLibsOnly.m from 
 the root directory of your local repository.  Only the critical files
 will be copied to a folder "CFL_Libs", and you can cut-and-paste that
-to your own local project.  Please cite
+to your own local project.  Please cite this content in your work.
 
 General approach for using this library:
    1. Identify the parts in your system that will hit each other during simulation
@@ -37,6 +37,10 @@ Recommendations:
 
 
 #########  Release History  #########
+v 4.1(R2019a)   Mar 2019       Updated v4.1 for R2019a
+                               Minor changes to accommodate physical signal units
+
+
 v 4.1(R2018b)   Nov 2018       Added two examples
      (R2018a)   
      (R2017b)   1. New example Caster_4_Whl.slx

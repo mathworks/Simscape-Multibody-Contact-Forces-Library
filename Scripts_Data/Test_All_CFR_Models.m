@@ -70,6 +70,7 @@ friction_variants = {'None','Stick-Slip Continuous'};
 for mdl_i = 1:length(mdlnames)
     mdl = char(mdlnames{mdl_i});
     open_system(mdl);
+    pause(1)
     if(strcmp(mdl,'sm_ball_bearing_testrig'))
         set_param([bdroot '/Ball Bearing'],'popup_constraints','Forces')
         sm_ball_bearing_testrig_param

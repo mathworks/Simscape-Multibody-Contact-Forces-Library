@@ -1,5 +1,3 @@
-% Copyright 2018 The MathWorks, Inc.
-
 % Bearing geometry
 bearing.D           = 0.1;      % Outer diameter (m)
 bearing.d           = 0.04;     % Inner diameter (m)
