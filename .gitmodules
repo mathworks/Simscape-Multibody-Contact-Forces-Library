@@ -1,3 +1,0 @@
-[submodule "CFL_Core"]
-	path = CFL_Core
-	url = https://github.com/mathworks/Simscape-Multibody-Submodule-Contact-Forces.git
