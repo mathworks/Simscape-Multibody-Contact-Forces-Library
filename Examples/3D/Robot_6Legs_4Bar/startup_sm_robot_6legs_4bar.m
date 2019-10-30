@@ -1,5 +1,5 @@
 % Startup script for sm_robot_6legs_4bar.slx
-% Copyright 2018 The MathWorks, Inc.
+% Copyright 2018-2019 The MathWorks, Inc.
 
 addpath([pwd filesep 'Images']);
 addpath([pwd filesep 'Libraries']);

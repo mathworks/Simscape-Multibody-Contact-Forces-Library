@@ -3,7 +3,7 @@
 %
 % The plot below shows speeds relative to the inner race.
 %
-% Copyright 2018 The MathWorks, Inc.
+% Copyright 2018-2019 The MathWorks, Inc.
 
 % Generate simulation results if they don't exist
 if ~exist('simlog_sm_ball_bearing_testrig', 'var')

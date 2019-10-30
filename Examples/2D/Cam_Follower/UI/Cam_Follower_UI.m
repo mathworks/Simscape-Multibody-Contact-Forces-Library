@@ -20,7 +20,7 @@ function varargout = Cam_Follower_UI(varargin)
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Copyright 2014-2018 The MathWorks, Inc.
+% Copyright 2014-2019 The MathWorks, Inc.
 
 % Edit the above text to modify the response to help Cam_Follower_UI
 

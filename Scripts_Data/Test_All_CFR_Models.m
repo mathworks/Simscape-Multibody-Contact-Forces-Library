@@ -1,4 +1,4 @@
-% Copyright 2014-2018 The MathWorks, Inc.
+% Copyright 2014-2019 The MathWorks, Inc.
 
 clear CFR_Res
 
@@ -68,7 +68,7 @@ friction_law_list = {'friction_law','friction_law_box2box','friction_law_box2bel
 force_variants = {'Linear','Nonlinear'};
 friction_variants = {'None','Stick-Slip Continuous'};
 
-for mdl_i = 42:length(mdlnames)
+for mdl_i = 36:length(mdlnames)
     mdl = char(mdlnames{mdl_i});
     open_system(mdl);
     if(strcmp(mdl,'sm_ball_bearing_testrig'))

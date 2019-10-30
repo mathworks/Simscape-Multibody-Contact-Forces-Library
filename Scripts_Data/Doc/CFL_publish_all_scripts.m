@@ -1,4 +1,4 @@
-% Copyright 2014-2018 The MathWorks, Inc.
+% Copyright 2014-2019 The MathWorks, Inc.
 
 ds_list = dir('*Contact*.m');
 for ds_i = 1:length(ds_list)

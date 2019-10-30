@@ -2,7 +2,7 @@ function CheckHTMLDoc(HTMLDoc_file)
 % Verify if documentation for the example exists before attempting to
 % display the animation in the MATLAB web browser.
 
-% Copyright 2014-2018 The MathWorks, Inc.
+% Copyright 2014-2019 The MathWorks, Inc.
 
 if (exist(HTMLDoc_file))
     % If exists, display in web browser

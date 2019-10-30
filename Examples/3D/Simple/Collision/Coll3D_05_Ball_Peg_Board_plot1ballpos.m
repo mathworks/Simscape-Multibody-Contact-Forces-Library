@@ -1,6 +1,6 @@
 % Code to plot simulation results from Coll3D_05_Ball_Peg_Board
 %
-% Copyright 2015-2018 The MathWorks, Inc.
+% Copyright 2015-2019 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

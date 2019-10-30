@@ -1,5 +1,5 @@
 % Startup for Simscape Multibody Contact Force Library
-% Copyright 2014-2018 The MathWorks, Inc.
+% Copyright 2014-2019 The MathWorks, Inc.
 
 CFR_HomeDir = pwd;
 addpath(genpath(pwd));

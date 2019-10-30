@@ -46,7 +46,7 @@ function blkStruct = slblocks
 %      blkStruct.Browser(2).Name    = 'Simulink Extras';
 %
 
-%   Copyright 1990-2018 The MathWorks, Inc.
+%   Copyright 1990-2019 The MathWorks, Inc.
 
 %
 % Name of the subsystem which will show up in the Simulink Blocksets
