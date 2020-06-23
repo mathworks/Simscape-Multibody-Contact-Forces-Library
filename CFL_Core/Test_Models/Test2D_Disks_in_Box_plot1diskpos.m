@@ -1,6 +1,6 @@
 % Code to plot simulation results from Test2D_Disks_in_Box
 %
-% Copyright 2015-2019 The MathWorks, Inc.
+% Copyright 2015-2020 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

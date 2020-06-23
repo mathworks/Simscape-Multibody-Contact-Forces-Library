@@ -1,5 +1,5 @@
 % Parameters for sm_robot_6legs_4bar.slx
-% Copyright 2018-2019 The MathWorks, Inc.
+% Copyright 2018-2020 The MathWorks, Inc.
 
 % Robot dimensions
 frame_len   = 23.6e-2;  % m 

@@ -3,7 +3,7 @@
 %
 % The plot below shows the cam angles and torque required to move the robot.
 %
-% Copyright 2018-2019 The MathWorks, Inc.
+% Copyright 2018-2020 The MathWorks, Inc.
 
 % Generate simulation results if they don't exist
 if ~exist('simlog_sm_robot_6legs_4bar', 'var')

@@ -1,7 +1,7 @@
 function startup_Contact_Forces_Core
 
 % Startup for project Contact_Forces_Core.prj
-% Copyright 2014-2019 The MathWorks, Inc.
+% Copyright 2014-2020 The MathWorks, Inc.
 
 % Load library and display version to Command Window
 CFL_libname = 'Contact_Forces_Lib';

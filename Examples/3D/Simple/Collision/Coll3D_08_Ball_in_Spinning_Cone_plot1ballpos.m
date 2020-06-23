@@ -1,6 +1,6 @@
 % Code to plot simulation results from Coll3D_08_Ball_in_Spinning_Cone
 %
-% Copyright 2015-2019 The MathWorks, Inc.
+% Copyright 2015-2020 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

@@ -1,5 +1,5 @@
 % CAM PARAMETERS
-% Copyright 2014-2019 The MathWorks, Inc.
+% Copyright 2014-2020 The MathWorks, Inc.
 
 Cam_PARAM.Cam.Radius_rev = 2; % cm
 Cam_PARAM.Cam.Radius_tip = 1; % cm

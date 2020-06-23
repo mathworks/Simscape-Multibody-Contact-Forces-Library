@@ -25,5 +25,5 @@
 % </style>
 % </html>
 % 
-% Copyright 2014-2018 The MathWorks(TM), Inc.
+% Copyright 2014-2020 The MathWorks(TM), Inc.
 

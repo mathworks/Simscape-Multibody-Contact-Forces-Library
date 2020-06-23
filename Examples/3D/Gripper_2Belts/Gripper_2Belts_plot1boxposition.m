@@ -3,7 +3,7 @@
 %
 % The plot below shows the 3D trajectory of the box moved by the gripper.
 %
-% Copyright 2017-2019 The MathWorks, Inc.
+% Copyright 2017-2020 The MathWorks, Inc.
 
 % Generate simulation results if they don't exist
 if ~exist('simlog_Gripper_2Belts', 'var')

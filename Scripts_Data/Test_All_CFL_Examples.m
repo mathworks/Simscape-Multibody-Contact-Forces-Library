@@ -1,4 +1,4 @@
-% Copyright 2014-2018 The MathWorks, Inc.
+% Copyright 2014-2020 The MathWorks, Inc.
 
 clear CFL_Res
 
