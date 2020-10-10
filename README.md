@@ -1,6 +1,8 @@
 # **Simscape Multibody Contact Forces Library**
 Copyright 2014-2020 The MathWorks, Inc.
 
+[![View Simscape Multibody Contact Forces Library on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/47417-simscape-multibody-contact-forces-library)
+
 This library contains contact force models for use with Simscape Multibody.
 They can be used for intermittent contact (parts bouncing off each other)
 and persistent contact (parts resting on each other).
