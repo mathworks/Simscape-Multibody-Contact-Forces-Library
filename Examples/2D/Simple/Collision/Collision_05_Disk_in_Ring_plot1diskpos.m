@@ -1,6 +1,6 @@
 % Code to plot simulation results from Collision_05_Disk_in_Ring
 %
-% Copyright 2015-2020 The MathWorks, Inc.
+% Copyright 2015-2021 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

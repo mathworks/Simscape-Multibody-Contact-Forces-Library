@@ -1,5 +1,5 @@
 % ADUSTMENTS WITH DEMO PUTTER ACTUATOR
-% Copyright 2012-2020 The MathWorks(TM), Inc.
+% Copyright 2012-2021 The MathWorks(TM), Inc.
 
 Mini_Golf_Param.Hole_1.Open_Loop_Adjustments = [20 3; -80 2; 0 2; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0];
 Mini_Golf_Param.Hole_2.Open_Loop_Adjustments = [-30 2; 40 3; 0 2; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0];
