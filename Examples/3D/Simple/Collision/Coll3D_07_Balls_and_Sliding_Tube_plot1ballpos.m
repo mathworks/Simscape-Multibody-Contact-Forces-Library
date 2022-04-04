@@ -1,6 +1,6 @@
 % Code to plot simulation results from Frict3D_08_Ball_on_Driven_Tube
 %
-% Copyright 2015-2021 The MathWorks, Inc.
+% Copyright 2015-2022 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

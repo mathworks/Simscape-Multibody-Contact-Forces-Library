@@ -1,5 +1,5 @@
 # **Simscape Multibody Contact Forces Library**
-Copyright 2014-2020 The MathWorks, Inc.
+Copyright 2014-2022 The MathWorks, Inc.
 
 [![View Simscape Multibody Contact Forces Library on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/47417-simscape-multibody-contact-forces-library)
 
@@ -30,7 +30,7 @@ See the examples to understand how they are used.
 
 Recommendations:
    1. Start with stiffness of 1e4 and damping of 1e2 and adjust from there.
-   2. Use solver ode15s, Relative Tolerance = 1e-4, Absolute Tolerance = 1e-5
+   2. Use solver ode23t, Relative Tolerance = 1e-4, Absolute Tolerance = 1e-5
        and set the maximum step size to 1e-2.
    3. If you get unexpected behavior (parts flying through one another, 
        system gaining energy) your tolerances are not small enough.
@@ -39,6 +39,15 @@ Recommendations:
        can also help.
  
 ### **Release History**
+**v5.0 Mar 2022** (R2019b through R2022a)
+1. Updated v5p0 for R2022a
+
+**v5.0 Sep 2021** (R2019b through R2021b)
+1. Updated v5p0 for R2021b
+
+**v5.0 Mar 2021** (R2019b through R2021a)
+1. Updated v5p0 for R2021a
+
 **v5.0 Sep 2020** (R2019b through R2020b)
 1. Updated v5p0 for R2020b
 
