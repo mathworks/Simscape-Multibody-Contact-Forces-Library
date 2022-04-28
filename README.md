@@ -8,7 +8,9 @@ They can be used for intermittent contact (parts bouncing off each other)
 and persistent contact (parts resting on each other).
 
 **Please note that the Spatial Contact Force block has been added in R2019b.**
-**You should see if this block meets your needs before using this library.**  
+**You should see if this block meets your needs before using this library.**
+
+**See File Exchange submission [Spatial Contact Force Examples Simscape Multibody](https://www.mathworks.com/matlabcentral/fileexchange/109680-spatial-contact-force-examples-simscape-multibody)**
 
 You are welcome to use these models in your own projects. If you need to 
 include the library in your own example, I recommend you use just the 

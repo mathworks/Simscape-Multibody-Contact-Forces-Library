@@ -35,7 +35,7 @@ for hole_i = 1:NumBlockChoices
 	MGT.SimTime(hole_i) = Elapsed_Sim_Time;
 
     % SAVE FIGURE WINDOWS TO A FILE
-	saveas(gcf,['./Results/Ball_Path_' HoleList(hole_i).Name],'fig');
+	saveas(gcf,[pwd filesep 'Results' filesep 'Ball_Path_' HoleList(hole_i).Name],'fig');
     close(gcf);
 end
 
