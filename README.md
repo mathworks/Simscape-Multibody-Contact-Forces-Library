@@ -10,6 +10,8 @@ and persistent contact (parts resting on each other).
 **Please note that the Spatial Contact Force block has been added in R2019b.**
 **You should see if this block meets your needs before using this library.**  
 
+**See File Exchange submission [Spatial Contact Force Examples Simscape Multibody](https://www.mathworks.com/matlabcentral/fileexchange/109680-spatial-contact-force-examples-simscape-multibody)**
+
 You are welcome to use these models in your own projects. If you need to 
 include the library in your own example, I recommend you use just the 
 project Contact_Forces_Core.prj in subfolder Core.  You can either use it
@@ -39,6 +41,9 @@ Recommendations:
        can also help.
  
 ### **Release History**
+**v5.0 Mar 2021** (R2019b through R2021a)
+1. Updated v5p0 for R2021a
+
 **v5.0 Sep 2020** (R2019b through R2020b)
 1. Updated v5p0 for R2020b
 
