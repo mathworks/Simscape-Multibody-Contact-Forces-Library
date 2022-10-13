@@ -19,7 +19,7 @@ directly, or include it as a Referenced Project just as is done
 in this project.
 
 
-General approach for using this library:
+General approach for using this library
    1. Identify the parts in your system that will hit each other during simulation
    2. Figure out which edges or surfaces will touch.  
       The contact models provided allow you to model contact between combinations

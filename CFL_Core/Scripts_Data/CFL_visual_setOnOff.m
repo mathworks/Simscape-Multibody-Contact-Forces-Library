@@ -5,10 +5,11 @@ function CFL_visual_setOnOff(mdlname,visOnOff)
 
 % Copyright 2014-2022 The MathWorks, Inc.
 
-CF_bpth=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','vis_on','.*');
-CF_bpth_box2box=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','vis_on_box2box','.*');
-CF_bpth_box2belt=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','vis_on_pla2pla','.*');
-CF_bpth_sph2belt=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','vis_on_sph2bel','.*');
+f=Simulink.FindOptions('FollowLinks',1,'LookUnderMasks','All','RegExp',1);
+CF_bpth=getfullname(Simulink.findBlocks(mdlname,'vis_on','.*',f));
+CF_bpth_box2box =getfullname(Simulink.findBlocks(mdlname,'vis_on_box2box','.*',f));
+CF_bpth_box2belt=getfullname(Simulink.findBlocks(mdlname,'vis_on_pla2pla','.*',f));
+CF_bpth_sph2belt=getfullname(Simulink.findBlocks(mdlname,'vis_on_sph2bel','.*',f));
 
 if(~isempty(CF_bpth))
     for i=1:length(CF_bpth)

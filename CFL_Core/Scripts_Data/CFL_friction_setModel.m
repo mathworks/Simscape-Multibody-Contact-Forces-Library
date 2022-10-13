@@ -5,10 +5,11 @@ function CFL_friction_setModel(mdlname,frictionModel)
 
 % Copyright 2014-2022 The MathWorks, Inc.
 
-CF_bpth=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','friction_law','.*');
-CF_bpth_box2box=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','friction_law_box2box','.*');
-CF_bpth_box2belt=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','friction_law_box2belt','.*');
-CF_bpth_sph2belt=find_system(mdlname,'RegExp','on','LookUnderMasks','on','FollowLinks','on','friction_law_sph2bel','.*');
+f=Simulink.FindOptions('FollowLinks',1,'LookUnderMasks','All','RegExp',1);
+CF_bpth=getfullname(Simulink.findBlocks(mdlname,'friction_law','.*',f));
+CF_bpth_box2box =getfullname(Simulink.findBlocks(mdlname,'friction_law_box2box','.*',f));
+CF_bpth_box2belt=getfullname(Simulink.findBlocks(mdlname,'friction_law_box2belt','.*',f));
+CF_bpth_sph2belt=getfullname(Simulink.findBlocks(mdlname,'friction_law_sph2bel','.*',f));
 
 if(~isempty(CF_bpth))
     

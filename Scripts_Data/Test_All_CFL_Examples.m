@@ -67,6 +67,7 @@ force_law_list = {'force_law','force_law_box2box','force_law_box2belt'};
 friction_law_list = {'friction_law','friction_law_box2box','friction_law_box2belt'};
 force_variants = {'Linear','Nonlinear'};
 friction_variants = {'None','Stick-Slip Continuous'};
+f=Simulink.FindOptions('FollowLinks',0,'LookUnderMasks','All','RegExp',1);
 
 for mdl_i = 1:length(mdlnames)
     mdl = char(mdlnames{mdl_i});
@@ -78,19 +79,19 @@ for mdl_i = 1:length(mdlnames)
     disp(['TESTING ' mdl ' ...']);
     
     for frclaw_i=1:length(force_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(force_law_list(frclaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Linear');
+                set_param(block_pths(i),char(force_law_list(frclaw_i)),'Linear');
             end
         end
     end
     
     for frilaw_i=1:length(friction_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(friction_law_list(frilaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'None');
+                set_param(block_pths(i),char(friction_law_list(frilaw_i)),'None');
             end
         end
     end
@@ -103,19 +104,19 @@ for mdl_i = 1:length(mdlnames)
     CFL_Res{mdl_i+1,5} = sprintf('%5.3f',Elapsed_Sim_Time);
     
     for frclaw_i=1:length(force_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(force_law_list(frclaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Linear');
+                set_param(block_pths(i),char(force_law_list(frclaw_i)),'Linear');
             end
         end
     end
     
     for frilaw_i=1:length(friction_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(friction_law_list(frilaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
+                set_param(block_pths(i),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
             end
         end
     end
@@ -125,19 +126,19 @@ for mdl_i = 1:length(mdlnames)
     CFL_Res{mdl_i+1,7} = sprintf('%5.3f',Elapsed_Sim_Time);
     
     for frclaw_i=1:length(force_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(force_law_list(frclaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Nonlinear');
+                set_param(block_pths(i),char(force_law_list(frclaw_i)),'Nonlinear');
             end
         end
     end
     
     for frilaw_i=1:length(friction_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(friction_law_list(frilaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'None');
+                set_param(block_pths(i),char(friction_law_list(frilaw_i)),'None');
             end
         end
     end
@@ -147,19 +148,19 @@ for mdl_i = 1:length(mdlnames)
     CFL_Res{mdl_i+1,9} = sprintf('%5.3f',Elapsed_Sim_Time);
     
     for frclaw_i=1:length(force_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(force_law_list(frclaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(force_law_list(frclaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(force_law_list(frclaw_i)),'Nonlinear');
+                set_param(block_pths(i),char(force_law_list(frclaw_i)),'Nonlinear');
             end
         end
     end
     
     for frilaw_i=1:length(friction_law_list)
-        block_pths = find_system(bdroot,'RegExp','on','LookUnderMasks','all',char(friction_law_list(frilaw_i)),'.*');
+        block_pths=Simulink.findBlocks(mdl,char(friction_law_list(frilaw_i)),'.*',f);
         if(~isempty(block_pths))
             for i=1:length(block_pths)
-                set_param(char(block_pths(i)),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
+                set_param(block_pths(i),char(friction_law_list(frilaw_i)),'Stick-Slip Continuous');
             end
         end
     end

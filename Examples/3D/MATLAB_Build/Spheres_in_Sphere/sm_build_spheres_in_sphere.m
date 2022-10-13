@@ -55,7 +55,8 @@ rtfm = 'sm_lib/Frames and Transforms/Rigid Transform';
 wdfm = 'sm_lib/Frames and Transforms/World Frame';
 rvjt = 'sm_lib/Joints/Revolute Joint';
 sdjt = 'sm_lib/Joints/6-DOF Joint';
-slid = 'sm_lib/Body Elements/Solid';
+slid = 'sm_lib/Body Elements/Spherical Solid';
+rlid = 'sm_lib/Body Elements/Revolved Solid';
 mcfg = 'sm_lib/Utilities/Mechanism Configuration';
 scfg = 'nesl_utility/Solver Configuration';
 
@@ -80,13 +81,13 @@ subsys_position = [230 154 330 196];% Position of subsystem in top level diagram
 %% Clean out model
 
 % Delete lines
-linehan = find_system(mdl,'FindAll','on','type','line');
+linehan = find_system(mdl,'MatchFilter',@Simulink.match.allVariants,'FindAll','on','type','line');
 if ~isempty(linehan)
     delete(linehan)
 end
 
 % Delete blocks
-blkhan = find_system(mdl,'Type','Block');
+blkhan = find_system(mdl,'MatchFilter',@Simulink.match.allVariants,'Type','Block');
 if ~isempty(blkhan)
     delete_block(blkhan)
 end
@@ -107,14 +108,14 @@ add_line(mdl,'World Frame/RConn1',...
 sub_h = add_block('simulink/Ports & Subsystems/Subsystem',[mdl '/' subsys_name],'Position',subsys_position);
 
 % Delete lines
-linehan = find_system(sub_h,'LookUnderMasks','all','FollowLinks','on','FindAll','on','type','line');
+linehan = find_system(sub_h,'MatchFilter',@Simulink.match.allVariants,'LookUnderMasks','all','FollowLinks','on','FindAll','on','type','line');
 if ~isempty(linehan)
     delete(linehan)
 end
 
 % Delete blocks
-inport_h = find_system(sub_h,'BlockType','Inport');
-outport_h = find_system(sub_h,'BlockType','Outport');
+inport_h = find_system(sub_h,'MatchFilter',@Simulink.match.allVariants,'BlockType','Inport');
+outport_h = find_system(sub_h,'MatchFilter',@Simulink.match.allVariants,'BlockType','Outport');
 delete_block(inport_h);
 delete_block(outport_h);
 
@@ -160,7 +161,6 @@ for insph_i = 1:num_sphs
     
     % Set parameters for inner spheres
     set_param(insph_h(insph_i),...
-        'GeometryShape','Sphere',...
         'SphereRadius','inner_sphere_rad',...
         'GraphicDiffuseColor','clr_inner_sphere',...
         'Density','1000');
@@ -179,13 +179,12 @@ end
 
 %%  Add Outer Sphere
 
-outsph_h = add_block(slid,...
+outsph_h = add_block(rlid,...
     [bdroot '/' get_param(sub_h,'Name') '/OutSph'],...
     'Position',blk_or+[1 0 1 0]*600,...
     'Orientation','Left');
 
 set_param(outsph_h,...
-    'GeometryShape','GeneralSolidOfRevolution',...
     'RevolutionCrossSection','outer_sphere_xs',...
     'RevolutionExtent','Full',...
     'GraphicDiffuseColor','clr_outer_sphere',...
