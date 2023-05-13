@@ -1,4 +1,4 @@
-% Copyright 2017-2022 The MathWorks, Inc.
+% Copyright 2017-2023 The MathWorks, Inc.
 
 % Bearing geometry
 bearing.D           = 0.1;      % Outer diameter (m)

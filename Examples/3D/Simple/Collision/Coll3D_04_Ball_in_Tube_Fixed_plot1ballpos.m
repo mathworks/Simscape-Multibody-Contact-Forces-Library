@@ -1,6 +1,6 @@
 % Code to plot simulation results from Coll3D_04_Ball_in_Tube_Fixed
 %
-% Copyright 2015-2022 The MathWorks, Inc.
+% Copyright 2015-2023 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

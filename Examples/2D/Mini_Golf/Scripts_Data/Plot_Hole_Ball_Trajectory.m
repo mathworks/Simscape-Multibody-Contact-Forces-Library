@@ -1,5 +1,5 @@
 % PLOT BALL PATH
-% Copyright 2012-2022 The MathWorks(TM), Inc.
+% Copyright 2012-2023 The MathWorks(TM), Inc.
 
 holestr = HoleChoice;
 

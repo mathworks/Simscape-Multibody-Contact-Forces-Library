@@ -1,6 +1,6 @@
 % Code to plot simulation results from Test3D_Balls_in_Box
 %
-% Copyright 2015-2022 The MathWorks, Inc.
+% Copyright 2015-2023 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

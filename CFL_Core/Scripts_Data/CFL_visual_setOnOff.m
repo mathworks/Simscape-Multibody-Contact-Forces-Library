@@ -3,7 +3,7 @@ function CFL_visual_setOnOff(mdlname,visOnOff)
 % from Simscape Multibody Contact Force Library. Pass the name of the model
 % as an argument to this function
 
-% Copyright 2014-2022 The MathWorks, Inc.
+% Copyright 2014-2023 The MathWorks, Inc.
 
 f=Simulink.FindOptions('FollowLinks',1,'LookUnderMasks','All','RegExp',1);
 CF_bpth=getfullname(Simulink.findBlocks(mdlname,'vis_on','.*',f));

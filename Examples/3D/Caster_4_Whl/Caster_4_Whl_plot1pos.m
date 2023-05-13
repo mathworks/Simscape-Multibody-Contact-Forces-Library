@@ -1,6 +1,6 @@
 % Code to plot simulation results from Caster_4_Whl
 %
-% Copyright 2015-2022 The MathWorks, Inc.
+% Copyright 2015-2023 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

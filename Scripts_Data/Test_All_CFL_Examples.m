@@ -1,4 +1,4 @@
-% Copyright 2014-2022 The MathWorks, Inc.
+% Copyright 2014-2023 The MathWorks, Inc.
 
 clear CFL_Res
 
@@ -72,6 +72,8 @@ f=Simulink.FindOptions('FollowLinks',0,'LookUnderMasks','All','RegExp',1);
 for mdl_i = 1:length(mdlnames)
     mdl = char(mdlnames{mdl_i});
     open_system(mdl);
+    set_param(mdl,'Solver','ode23t');
+    save_system(mdl);
     if(strcmp(mdl,'sm_ball_bearing_testrig'))
         set_param([bdroot '/Ball Bearing'],'popup_constraints','Forces')
         sm_ball_bearing_testrig_param
