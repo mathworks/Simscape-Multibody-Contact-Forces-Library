@@ -1,7 +1,5 @@
 # **Simscape Multibody Contact Forces Library**
-Copyright 2014-2022 The MathWorks, Inc.
-
-[![View Simscape Multibody Contact Forces Library on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/47417-simscape-multibody-contact-forces-library)
+Copyright 2014-2023 The MathWorks, Inc.
 
 This library contains contact force models for use with Simscape Multibody.
 They can be used for intermittent contact (parts bouncing off each other)
@@ -12,12 +10,14 @@ and persistent contact (parts resting on each other).
 
 **See File Exchange submission [Spatial Contact Force Examples Simscape Multibody](https://www.mathworks.com/matlabcentral/fileexchange/109680-spatial-contact-force-examples-simscape-multibody)**
 
+View on File Exchange [![View Simscape Multibody Contact Forces Library on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/47417-simscape-multibody-contact-forces-library)  
+You can also open in MATLAB Online: [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=mathworks/Simscape-Multibody-Contact-Forces-Library&project=Contact_Forces_Library.prj) 
+
 You are welcome to use these models in your own projects. If you need to 
 include the library in your own example, I recommend you use just the 
 project Contact_Forces_Core.prj in subfolder Core.  You can either use it
 directly, or include it as a Referenced Project just as is done 
 in this project.
-
 
 General approach for using this library
    1. Identify the parts in your system that will hit each other during simulation
