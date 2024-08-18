@@ -1,6 +1,6 @@
 % Code to plot simulation results from Coll3D_03_Balls_in_Box
 %
-% Copyright 2015-2023 The MathWorks, Inc.
+% Copyright 2015-2024 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try

@@ -2,7 +2,7 @@ function CheckAnim(animation_file)
 % Verify if animation file exists before attempting to display 
 % the animation in the MATLAB web browser.
 
-% Copyright 2014-2023 The MathWorks, Inc.
+% Copyright 2014-2024 The MathWorks, Inc.
 
 if (exist(animation_file))
     % If exists, display in web browser

@@ -1,5 +1,5 @@
 % STARTUP MINI GOLF
-% Copyright 2012-2023 The MathWorks(TM), Inc.
+% Copyright 2012-2024 The MathWorks(TM), Inc.
 
 Mini_Golf_Model_HomeDir = pwd;
 addpath(pwd);
