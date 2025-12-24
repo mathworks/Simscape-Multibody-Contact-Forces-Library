@@ -39,6 +39,9 @@ Recommendations:
 
 
 #########  Release History  #########
+v 5.0(R2025b)   Dec 2025       Fixed helper functions for examples
+     (R2022a)
+	 
 v 5.0(R2020a)   Mar 2020       Updated 5.0 for R2020a
      (R2019b)
 
