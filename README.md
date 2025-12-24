@@ -41,12 +41,6 @@ Recommendations:
        can also help.
  
 ### **Release History**
-**v5.0 Mar 2024** (R2019b through R2024a)
-1. Updated v5p0 for R2024a
-
-**v5.0 Sep 2023** (R2019b through R2023b)
-1. Updated v5p0 for R2023b
-
 **v5.0 Mar 2023** (R2019b through R2023a)
 1. Updated v5p0 for R2023a
 
