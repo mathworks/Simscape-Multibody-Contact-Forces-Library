@@ -1,6 +1,6 @@
 % Code to plot simulation results from Friction_03_Double_Pendulum_Constraint
 %
-% Copyright 2015-2024 The MathWorks, Inc.
+% Copyright 2015-2025 The MathWorks, Inc.
 
 % Reuse figure if it exists, else create new figure
 try
