@@ -1,5 +1,5 @@
 % Parameters for sm_tread_drive
-% Copyright 2017-2025 The MathWorks, Inc.
+% Copyright 2017-2026 The MathWorks, Inc.
 
 % Tread geometry
 tread_w = 0.6;
